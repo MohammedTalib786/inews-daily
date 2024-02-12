@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Open+Sans:wght@400;500;600;700;800&family=Orbitron:wght@400;500&family=Outfit:wght@200;400;700&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@200;300;400;500;600&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;0,800;0,900;1,700&family=Roboto:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.anchor {
+    text-decoration: none;
+}
+
+.anchor:hover {
+    text-decoration: underline;
+}
+
+.spinner {
+    /* background-color: red; */
+    width: 6rem;
+    height: 6rem;
+    border: 3px solid black;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.scrollToTop {
+    position: fixed;
+    /* background: red; */
+    background-color: #0D6EFD;
+    color: white;
+    z-index: 999;
+    bottom: 0;
+    /* bottom: 3rem; */
+    right: 4rem;
+    width: 3rem;
+    height: 3rem;
+    outline: 0;
+    border: 0;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.active {
+    bottom: 3rem;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.navForActive {
+    color: black;
+}
+
+.navForActive:hover {
+    color: gray;
+}
+
+.navForActive:active {
+    color: gray;
+}
+
+/* #rightShift{
+    position: absolute;   
+    right: 3rem;
+} */
+
+@media only screen and (min-width: 992px) {
+    #rightShift {
+        position: absolute;
+        right: 5rem;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #rightShift {
+        position: relative;
+        right: 0;
+    }
+}
